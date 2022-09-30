@@ -1,0 +1,147 @@
+/*----modal Login-------*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  
+    background-color: var(--overlay-bg-color);
+  
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    overflow-y: scroll;
+  }
+  .backdrop.is-hidden {
+    //visibility: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .backdrop.is-hidden .popup {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  
+  .popup {
+    width: 300px;
+    height: 500px;
+    padding: 20px 10px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  
+    background-color: var(--primary-bg-color);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  
+    opacity: 1;
+    transition: transform 250ms var(--primary-animation), opasity 250ms var(--primary-animation);
+  }
+  .btn__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+  
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  
+    &:hover svg {
+      fill: var(--accent-bg-color);
+    }
+  }
+  
+  /*------form of modal------*/
+  .modal-login__form {
+    display: none;
+  }
+  .modal-login__form.active {
+    display: block;
+  }
+  .modal-signup__form {
+    display: none;
+  }
+  .modal-signup__form.active {
+    display: block;
+  }
+  .form__title {
+    margin-bottom: 10px;
+  
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: var(--primary-text-color);
+  
+    @media screen and (max-width: 350px) {
+      font-size: 16px;
+    }
+  }
+  
+  .form__element {
+    margin: 15px 0px;
+  }
+  
+  .form__element.message .error {
+    color: var(--warning-text-color);
+    font-weight: 500;
+  }
+  .form__element.message .success {
+    color: rgb(0, 128, 49);
+    font-weight: 500;
+  }
+  
+  .modal-login__form .form__element:last-child {
+    margin-top: 60px;
+  }
+  .form__label {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--primary-text-color);
+  }
+  .form__input {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  .btn__submit {
+    display: block;
+    margin: 30px auto 30px;
+    width: 136px;
+    height: 44px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background-color: var(--accent-bg-color);
+    color: var(--secondary-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--hover-accent-bg-color);
+      opacity: 0.8;
+    }
+  }
+  .form__element a {
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+    font-size: var(--secondary-font-size);
+    font-weight: 400;
+    color: rgb(98, 96, 243);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  

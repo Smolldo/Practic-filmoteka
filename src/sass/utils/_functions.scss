@@ -1,0 +1,17 @@
+//mixins,  placeholders....
+
+@mixin animated($property) {
+    transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @mixin doubleAnimation($firstProperty, $secondProperty) {
+    transition: $firstProperty 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      $secondProperty 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @mixin tripleAnimtaion($firstProperty, $secondProperty, $thirdProperty) {
+    transition: $firstProperty 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      $secondProperty 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      $thirdProperty 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  

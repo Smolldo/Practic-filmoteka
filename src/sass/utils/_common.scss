@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// ==================================================================
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+// ==================================================================
+a {
+  text-decoration: none;
+}
+// ==================================================================
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+// ==================================================================
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+// ==================================================================
+.body {
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+
+  background-color: var(--primary-bg-color);
+}
+// ==================================================================
+.wrapper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 320px) {
+    min-width: 320px;
+    max-width: 767px;
+  padding: 0 20px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+    //max-width: 1023px;
+    padding: 20px 75px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+    
+  }
+}
+.main .wrapper {
+  
+  @media screen and (min-width: 768px) {
+  padding: 0 76px;
+  }
+  @media screen and (max-width: 767px) {
+    
+  padding: 0;
+  }
+}
+
+// ==================================================================
+.visualy-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}

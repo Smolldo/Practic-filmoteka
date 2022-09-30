@@ -1,0 +1,348 @@
+//full header cover
+.home-open{
+    @media screen and (min-width:320px){
+        background:  linear-gradient(to left, var(--overlay-bg-color) 40%, var(--overlay-bg-color) 100%), 
+        url('.././images/header-images/tablet/header-home-tablet1x.jpg');
+    }
+    @media screen and (min-width:768px){
+        background:  linear-gradient(to left, var(--overlay-bg-color) 40%, var(--overlay-bg-color) 100%), 
+        url('.././images/header-images/desktop/header-home-desktop1x.jpg');
+    }
+    @media screen and (min-width:1024px){
+        background:  linear-gradient(to left, var(--overlay-bg-color) 40%, var(--overlay-bg-color) 100%), 
+        url('.././images/header-images/desktop/header-home-desktop1x.jpg');
+    }
+}
+
+
+
+
+
+.header__cover{
+    position: relative;
+    @media screen and (min-width:320px){
+        padding: 46px 21px 33px;
+    }
+    @media screen and (min-width:768px){
+        padding: 41px 71px 59px;
+    }
+}
+//list cover
+.header__list-cover{
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+    @media screen and (min-width:320px){
+        padding-top: 15px;
+    }
+    @media screen and (min-width:768px){
+        padding-top: 20px;
+    }
+}
+
+//logo part
+
+.logo__link{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    fill: var(--thirty-text-color);
+    color: var(--secondary-text-color);
+    transition:var(--primary-animation);
+    transition-duration: .25s;
+    transition-property: color, fill;
+    
+
+   &:hover, &:focus{
+       fill: var(--hover-accent-bg-color);
+       color: var(--hover-accent-bg-color);
+   }
+}
+
+.logo__text{
+
+    font-size: 30px;
+    line-height: 35px;
+
+    @media screen and (min-width:320px){
+        display: none;
+    }
+    @media screen and (min-width:768px){
+        display: block;
+        margin-left: 10px;
+    }
+    
+}
+
+.home__block{
+
+    @media screen and (min-width:320px){
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width:768px){
+        margin-top: 0;
+    }
+}
+
+
+//nav list part
+.nav__list{
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.nav__item{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & + & {
+        margin-left: 15px;
+    }
+}
+
+.first{
+        &::after{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 1px;
+            margin-right: 10px;
+            background-color: var(--hover-accent-bg-color);
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+}
+
+.nav__btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;  
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+
+    position: relative;
+
+    transition:var(--primary-animation);
+    transition-duration: .25s;
+    transition-property: color;
+
+    &:hover, &:focus{
+        color: var(--hover-accent-bg-color);
+        cursor: pointer;
+    }
+
+    &.current::after{
+        position: absolute;
+        content: "";
+
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--hover-accent-bg-color);
+    }
+
+    
+}
+
+//reg list
+.reg__list{
+  display: flex;
+  margin-right: 0;
+  margin-left: 20px;
+  position: relative;
+}
+
+.reg__item{
+    & + &{
+        margin-left: 10px;
+    }
+}
+
+.reg__btn{
+    padding: 2px 5px;
+    border: 1px solid var(--hover-accent-bg-color);
+
+    color: var(--hover-accent-bg-color);
+
+    transition:var(--primary-animation) .25s box-shadow, background-color, border-radius;
+
+    &:hover, &:focus{
+        color: var(--secondary-text-color);
+        box-shadow: 0 0 35px var(--hover-accent-bg-color);
+        background-color: var(--hover-accent-bg-color);
+        border-radius: 3px;
+    }
+}
+
+//user__name
+.user__name{
+    color: var(--secondary-text-color);
+    font-size: 12px;
+    line-height: 16px;
+
+    position: absolute;
+    right: 0;
+    bottom: 190%;
+}
+
+//searching part
+.inp_lab{
+   max-width: 336px;
+    position: relative;
+    margin: 34px auto 22px;
+}
+
+.searching__input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: var(--primary-font-size);
+    line-height: 16.41px;
+
+    background-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline: transparent;
+
+    border-bottom-color: var(--secondary-text-color);
+
+    color: var(--secondary-text-color);
+
+    &:focus{
+        border-bottom-color: var(--hover-accent-bg-color);
+    }
+
+    @media screen and (min-width:320px){
+        width: 280px;
+    }
+    @media screen and (min-width:768px){
+        width: 336px;
+    }
+}
+
+//search btn
+
+.searching__button{
+    border: transparent;
+    background-color: transparent;
+    padding: 0;
+    
+    position: absolute;
+    top: 0%;
+    right: 5px;
+    fill: var(--secondary-text-color);
+
+    transition:var(--primary-animation);
+    transition-duration: .25s;
+    transition-property: fill;
+
+    &:hover, &:focus{
+        cursor: pointer;
+        fill: var(--hover-accent-bg-color);
+    }
+}
+
+
+.searching__error__text{
+    color: var(--error-color);
+
+    font-size: var(--primary-font-size);
+    line-height: 16.41px;
+    
+
+    @media screen and (min-width:320px){
+        text-align: left;
+    }
+    @media screen and (min-width:768px){
+        text-align: center;
+    }
+}
+
+
+
+//header CABINET part
+
+.cabinet-open{
+     @media screen and (min-width:320px){
+        background:  linear-gradient(to left, var(--overlay-bg-color) 40%, var(--overlay-bg-color) 100%), 
+        url('.././images/header-images/tablet/header-cab-tablet1x.jpg');
+    }
+    @media screen and (min-width:768px){
+        background:  linear-gradient(to left, var(--overlay-bg-color) 40%, var(--overlay-bg-color) 100%),
+        url('.././images/header-images/desktop/header-cab-desktop1x.jpg');
+    }
+}
+
+
+
+//parts
+
+.library__btn__list{
+    display: flex;
+    justify-content: center;
+    margin: 45px auto 5px;
+
+    @media screen and (min-width:320px){
+        padding-bottom: 50px;
+    }
+    @media screen and (min-width:768px){
+        padding-bottom: 10px;
+    }
+}
+
+.library__btn__item:nth-child(2){
+    margin-left: 15px;
+}
+
+.library__btn{
+    width: 136px;
+    height: 44px;
+
+
+    border: 1px solid var(--secondary-text-color);
+    background-color: transparent;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    transition:var(--primary-animation);
+    transition-duration: .25s;
+    transition-property: background-color, box-shadow;
+
+
+
+    &:hover, &:focus{
+        cursor: pointer;
+        background-color: var(--hover-accent-bg-color);
+        box-shadow: 0px 0px 43px var(--hover-accent-bg-color);
+    }
+}
+
+.is-none{
+    display: none;
+}
+
+.is-visible{
+    opacity: 0;
+    pointer-events: none;
+}

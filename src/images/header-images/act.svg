@@ -1,0 +1,16 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-burg" viewBox="0 0 24 16">
+<path d="M0 2.667v-2.667h24v2.667h-24zM0 9.333h24v-2.667h-24v2.667zM0 16h24v-2.667h-24v2.667z"></path>
+</symbol>
+<symbol id="icon-check" viewBox="0 0 17 16">
+<path fill="#fff" style="fill: var(--color1, #fff); stroke: var(--color1, #fff)" stroke="#fff" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.2133" d="M4.221 8.268l-0.073-0.070-1.102 1.044 3.884 3.705 8.159-7.784-1.095-1.045-7.064 6.732-2.708-2.583z"></path>
+</symbol>
+<symbol id="icon-phone" viewBox="0 0 16 16">
+<path d="M12.441 9.887l-1.634-0.187c-0.392-0.045-0.778 0.090-1.055 0.367l-1.184 1.184c-1.82-0.926-3.313-2.412-4.239-4.239l1.19-1.19c0.277-0.277 0.412-0.663 0.367-1.055l-0.187-1.621c-0.077-0.65-0.624-1.139-1.28-1.139h-1.113c-0.727 0-1.332 0.605-1.287 1.332 0.341 5.494 4.734 9.881 10.222 10.222 0.727 0.045 1.332-0.56 1.332-1.287v-1.113c0.006-0.65-0.482-1.197-1.132-1.274z"></path>
+</symbol>
+<symbol id="icon-x" viewBox="0 0 16 16">
+<path d="M13.333 3.651l-0.985-0.985-3.904 3.904-3.904-3.904-0.985 0.985 3.904 3.904-3.904 3.904 0.985 0.985 3.904-3.904 3.904 3.904 0.985-0.985-3.904-3.904 3.904-3.904z"></path>
+</symbol>
+</defs>
+</svg>

@@ -1,0 +1,40 @@
+:root{
+    // text variables
+    --primary-font-family: 'Roboto', sans-serif;
+
+    // font size
+    --primary-font-size: 14px;
+    --secondary-font-size: 16px;
+
+    // text colors
+    --orange-color: #ff6b08;					   
+    --primary-text-color: #000;
+    --secondary-text-color: #fff;
+    --thirty-text-color: #545454;
+    --accent-text-color: #ff6b08;
+    --warning-text-color: #ff001b;
+    --overlay-bg-color: rgba(0, 0, 0, 0.56);
+
+    // background colors
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #f7f7f7;
+    --accent-bg-color: #ff6b08;
+    --hover-accent-bg-color: #ff6b01;
+    --error-color: #ff001b;
+    --overlay-orange:#ff6b08bd;
+    --team-block:rgb(6, 0, 56);
+    --team-back:rgba(0, 0, 0, 0.911);
+
+// animations
+    --primary-animation: cubic-bezier(0.4, 0, 0.2, 1);
+//secondary-animation: cubic-bezier();
+
+// brackpounts
+    --mobile: 320px;
+    --tablet: 768px;
+    --desktop: 1024px;
+
+}
+
+
+

@@ -1,0 +1,48 @@
+<div class="movie-modal__overlay" data-movieModal>
+  <div class="movie-modal">
+    <button type="button" class="movie-modal__btn-close" data-close>
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="movie-modal__btn-close--icon">
+        <path d="M8 8L22 22" stroke="black" stroke-width="2" />
+        <path d="M8 22L22 8" stroke="black" stroke-width="2" />
+      </svg>
+    </button>
+    <div class="movie-modal__pic">
+      <img src="https://www.themoviedb.org/t/p/w1280{{poster_path}}" alt="backdrop_image" />
+    </div>
+    <div class="movie-modal__desc">
+      <h2 class="movie-modal__title">{{original_title}}</h2>
+      <ul class="movie-modal__info">
+        <li class="movie-modal__info-item">
+          Vote / votes
+          <span class="movie-modal__span movie-modal__span--vote">{{vote_average}}</span>
+          <span class="movie-modal__span movie-modal__span--slash">/</span>
+          <span class="movie-modal__span movie-modal__span--votes">{{vote_count}}</span>
+        </li>
+        <li class="movie-modal__info-item">
+          Popularity
+          <span class="movie-modal__span movie-modal__span--popularity">{{popularity}}</span>
+        </li>
+        <li class="movie-modal__info-item">
+          Original title
+          <span class="movie-modal__span movie-modal__span--original-title">{{original_title}}</span>
+        </li>
+        <li class="movie-modal__info-item">
+          Genre
+          <span class="movie-modal__span movie-modal__span--genre">{{genres.[0].name}}</span>
+        </li>
+        <li class="movie-modal__info-item">
+          Release date
+          <span class="movie-modal__span movie-modal__span--date">{{release_date}}</span>
+        </li>
+      </ul>
+      <div class="movie-modal__about">
+        <h3 class="movie-modal__title movie-modal__title--about">About</h3>
+        <p class="movie-modal__about-text">{{overview}}</p>
+      </div>
+      <div class="movie-modal__btns">
+        <button class="movie-modal__btn-add" data-addToWatched>Add to watched</button>
+        <button class="movie-modal__btn-add" data-addToQueue>Add to queue</button>
+      </div>
+    </div>
+  </div>
+</div>

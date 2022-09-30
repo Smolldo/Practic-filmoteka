@@ -1,0 +1,96 @@
+<header class="header">
+  <div class="wrapper header__cover home-open">
+    <div class="header__list-cover">
+      <a class="logo__link" href="#">
+        <svg class="logo__icon" width="24px" height="22px">
+          <use
+            href="./images/header-images/header-sprite.svg#icon-filmstrip"
+          ></use>
+        </svg>
+       <h1 class="logo__text">Filmoteka</h1>
+      </a>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <button class="nav__btn current" data-action="to-home">Home</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__btn" data-action="to-library">My library</button>
+        </li>
+      </ul>
+        <ul class="reg__list">
+          <span class="user__name"></span>
+          <li class="nav__item  reg__item">
+            <button class="nav__btn  reg__btn" data-action="login">
+              Log in
+            </button>
+          </li>
+          <li class="nav__item reg__item ">
+            <button class="nav__btn reg__btn is-none" data-action="loguot">
+              Log out
+            </button>
+          </li>
+        </ul>
+    </div>
+    <div class="home__block">
+      <div class="inp_lab">
+        <input
+          data-input
+          type="text"
+          placeholder="Поиск фильмов"
+          class="searching__input"
+        />
+        <button type="button" class="searching__button" aria-expanded="false">
+          <svg class="menu__btn__icon" width="12px" height="12px">
+            <use
+              xlink:href="./images/header-images/header-sprite.svg#icon-magnifier"
+            ></use>
+          </svg>
+        </button>
+      </div>
+      <p class="searching__error__text is-visible" data-error>
+        Search result not successful. Enter the correct movie name and
+      </p>
+    </div>
+    <!--Cabinet part-->
+    <ul class="library__btn__list library__block is-none">
+      <li class="library__btn__item">
+        <button class="library__btn" data-action="open-watched-list">
+          Watched
+        </button>
+      </li>
+      <li class="library__btn__item">
+        <button class="library__btn" data-action="open-queue-list">
+          Queue
+        </button>
+      </li>
+    </ul>
+  
+  <div class="theme-switch">
+    <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+      <use href="./images/svg/sprite.svg#sun"></use>
+    </svg>
+
+    <div class="theme-switch__control">
+      <input
+        class="theme-switch__toggle"
+        type="checkbox"
+        name="theme"
+        id="theme-switch-toggle"
+        aria-label="Переключить между тёмной и светлой темой"
+      />
+      <label
+        aria-hidden="true"
+        class="theme-switch__track"
+        for="theme-switch-toggle"
+      >
+      </label>
+      <div aria-hidden="true" class="theme-switch__marker"></div>
+    </div>
+
+    <svg class="theme-switch__icon" aria-label="Иконка луны">
+      <use href="./images/svg/sprite.svg#moon"></use>
+    </svg>
+  </div>
+</div>
+</div>
+</header>

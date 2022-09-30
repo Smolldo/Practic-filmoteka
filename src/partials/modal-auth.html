@@ -1,0 +1,90 @@
+<!-- modal LogIn/SignUp -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="popup">
+    <button class="btn__close" type="button" data-modal-close>
+      <svg width="30" height="30">
+        <use href="./images/svg/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <!-- form Log in -->
+    <form class="modal-login__form active">
+      <h2 class="form__title">Log in</h2>
+
+      <div class="form__element message"></div>
+      <div class="form__element">
+        <label class="form__label" for="email">Email</label>
+        <input
+          class="form__input"
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter e-mail...."
+        />
+      </div>
+
+      <div class="form__element">
+        <label class="form__label" for="password">Password</label>
+        <input
+          class="form__input"
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter password...."
+        />
+      </div>
+
+      <div class="form__element">
+        <button class="btn__submit" type="submit" disabled>LOG IN</button>
+      </div>
+
+      <div class="form__element">
+        <a class="to_change-pass" href="#"> Forgot password? </a>
+        <a class="to_signup" href="#signup"> Create an Account </a>
+      </div>
+    </form>
+
+    <!-- form Sign up -->
+    <form class="modal-signup__form" id="signup">
+      <h2 class="form__title">Sign up</h2>
+
+      <div class="form__element message"></div>
+      <div class="form__element">
+        <label class="form__label" for="email">Email</label>
+        <input
+          class="form__input"
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter e-mail...."
+        />
+      </div>
+
+      <div class="form__element">
+        <label class="form__label" for="password">Password</label>
+        <input
+          class="form__input password-one"
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter password...."
+        />
+      </div>
+
+      <div class="form__element">
+        <label class="form__label" for="password"></label>
+        <input
+          class="form__input password-two"
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Repeat password...."
+        />
+      </div>
+
+      <div class="form__element">
+        <button class="btn__submit" type="submit" disabled>SIGN UP</button>
+      </div>
+    </form>
+  </div>
+</div>

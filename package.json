@@ -1,0 +1,39 @@
+{
+  "name": "filmoteka",
+  "version": "1.0.0",
+  "description": "website for searching movies",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /Practic-filmoteka/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smolldo/Practic-filmoteka.git"
+  },
+  "keywords": [
+    "\"author\""
+  ],
+  "author": "Michael <maximqwerbich@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smolldo/Practic-filmoteka/issues"
+  },
+  "homepage": "https://github.com/Smolldo/Practic-filmoteka#readme",
+  "dependencies": {
+    "firebase": "^9.10.0",
+    "gh-pages": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.7.4"
+  }
+}
