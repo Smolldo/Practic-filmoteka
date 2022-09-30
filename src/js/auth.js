@@ -62,20 +62,22 @@ function logInUserHandler(event) {
 }
 
 /*--------- fetch-login to Firebase ------------*/
-function authWithEmailAndPassword(email, password) {
+async function authWithEmailAndPassword(email, password) {
   const apiKey = firebaseConfig.apiKey;
-  return fetch(
-    `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
-    {
-      method: 'POST',
-      body: JSON.stringify({ email, password, returnSecureToken: true }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    },
-  )
-    .then(response => response.json())
-    .catch(error => console.log(error));
+  try {
+    const response = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
+      {
+        method: 'POST',
+        body: JSON.stringify({ email, password, returnSecureToken: true }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+    return await response.json();
+  } catch (error) {
+    return console.log(error);
+  }
 }
 
 //=====================================================================================
@@ -105,18 +107,21 @@ function registrationNewUserHandler(event) {
 }
 
 /*-------- fetch-signup to Firebase ------------*/
-function RegistrationWithEmailAndPassword(email, password) {
+async function RegistrationWithEmailAndPassword(email, password) {
   const apiKey = firebaseConfig.apiKey;
 
-  return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
-    method: 'POST',
-    body: JSON.stringify({ email, password, returnSecureToken: true }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then(response => response.json())
-    .catch(error => console.log(error));
+  try {
+    const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
+      method: 'POST',
+      body: JSON.stringify({ email, password, returnSecureToken: true }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return await response.json();
+  } catch (error) {
+    return console.log(error);
+  }
 }
 //=======================================================================================
 //

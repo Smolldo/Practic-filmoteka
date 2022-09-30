@@ -71,7 +71,7 @@ function moidalCreate() {
     el.addEventListener('click', () => {
       themeSwitch.classList.add('visualy-hidden');
       fetch(
-        `https://api.themoviedb.org/3/movie/${el.id}?api_key=0d09eb187785fad1be6a14878e771552&language=en-US`,
+        `https://api.themoviedb.org/3/movie/${el.id}?api_key=282b076a53f47de1cdb41a3679f3fb05&language=en-US`,
       )
         .then(response => response.json())
         .then(response => {

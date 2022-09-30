@@ -5,7 +5,7 @@ export default class ApiService {
     this.searchIndex = 3;
     this.totalResultsFound = 0;
     this.totalPagesFound = 0;
-    this.key = '0d09eb187785fad1be6a14878e771552';
+    this.key = '282b076a53f47de1cdb41a3679f3fb05';
     this.moviesUrls = [];
     this.moviesArray = [];
     this.pageDesktop = 0;
@@ -22,28 +22,30 @@ export default class ApiService {
     ];
   }
 
-  searchMovies() {
+  async searchMovies() {
     this.defineUrls(localStorage.getItem('language') || 'en-US');
     let url = this.moviesUrls[this.searchIndex];
     // console.log(url);
     // console.log('language:', this.language);
 
-    return fetch(url)
-      .then(response => response.json())
-
-      .catch(err => console.log(err));
+    try {
+      const response = await fetch(url);
+      return await response.json();
+    } catch (err) {
+      return console.log(err);
+    }
   }
-  searchGenres() {
+  async searchGenres() {
     const language = localStorage.getItem('language') || 'en-US';
     //тут жестко заданный url, т.к. подгрузка жанров осуществляется без запросов пользователя, один раз,в самом начале работы
-    return fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${this.key}&language=${language}`,
-    )
-      .then(response => response.json())
-      .then(res => {
-        return res;
-      })
-      .then(data => localStorage.setItem('Genres', JSON.stringify(data.genres)))
-      .catch(err => console.log(err));
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/genre/movie/list?api_key=${this.key}&language=${language}`);
+      const res = await response.json();
+      const data = res;
+      return localStorage.setItem('Genres', JSON.stringify(data.genres));
+    } catch (err) {
+      return console.log(err);
+    }
   }
 }

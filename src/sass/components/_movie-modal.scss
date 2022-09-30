@@ -1,44 +1,40 @@
-@import '../utils/functions';
-
 .movie-modal__overlay {
-    z-index: 799;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.25);
-    opacity: 1;
-    overflow: auto;
-    @include animated(opacity);
+  z-index: 799;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  overflow: auto;
+}
+
+.movie-modal {
+  position: absolute;
+  width: 280px;
+  top: 65%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 48px 20px 41px;
+
+  .movie-modal__overlay--is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
   }
-  
-  .movie-modal {
-    position: absolute;
-    width: 280px;
-    top: 65%;
-    left: 50%;
-    background-color: #fff;
-    transform: translate(-50%, -50%) scale(1);
-    @include animated(transform);
-    padding: 48px 20px 41px;
-  
-    .movie-modal__overlay--is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-  
-    @media screen and (min-width: var(--tablet)) {
-      width: 618px;
-      display: flex;
-      padding: 40px 30px;
-      top: 50%;
-    }
-  
-    @media screen and (min-width: var(--desktop)) {
-      width: 882px;
-      padding: 50px 30px 40px;
-    }
+
+  @media screen and (min-width: 568px) {
+    width: 618px;
+    display: flex;
+    padding: 40px 30px;
+    top: 50%;
   }
+
+  @media screen and (min-width: 1024px) {
+    width: 882px;
+    padding: 50px 30px 40px;
+  }
+}
   
   .movie-modal__pic {
     width: 240px;
@@ -206,7 +202,7 @@
     font-size: 12px;
     line-height: 1.33;
     cursor: pointer;
-    @include tripleAnimtaion(background-color, color, border);
+  
   
     &:hover,
     &:focus {

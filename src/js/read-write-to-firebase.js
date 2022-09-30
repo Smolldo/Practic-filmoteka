@@ -1,37 +1,31 @@
 import { user } from './auth';
 
-export function readFromFBHundler(nameCollection) {
-  return fetch(
-    `https://gitpodmy-default-rtdb.europe-west1.firebasedatabase.app/collection/${user.idLocal}/${nameCollection}.json?auth=${user.id}`,
-  )
-    .then(response => response.json())
-    .then(response => {
-      if (response && response.error) {
-        console.log('ошибка чтения из FB');
-        //`<p class="error">${response.error}</p>`;
-      }
-      return response
-        ? Object.keys(response).map(key => ({
-            ...response[key],
-            id: key,
-          }))
-        : [];
-    });
+export async function readFromFBHundler(nameCollection) {
+  const response = await fetch(
+    `https://practic-bc31f-default-rtdb.firebaseio.com/${user.idLocal}/${nameCollection}.json?auth=${user.id}`);
+  const response_1 = await response.json();
+  if (response_1 && response_1.error) {
+    console.log('ошибка чтения из FB');
+  }
+  return response_1 ? Object.keys(response_1).map(key => ({
+    ...response_1[key],
+    id: key,
+  }))
+    : [];
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
-export function writeToFBHundler(nameCollection, object) {
-  return fetch(
-    `https://gitpodmy-default-rtdb.europe-west1.firebasedatabase.app/collection/${user.idLocal}/${nameCollection}.json?auth=${user.id}`,
+export async function writeToFBHundler(nameCollection, object) {
+  const response = await fetch(
+    `https://practic-bc31f-default-rtdb.firebaseio.com/${user.idLocal}/${nameCollection}.json?auth=${user.id}`,
     {
       method: 'POST',
       body: JSON.stringify(object),
       headers: {
         'Content-Type': 'application/json',
       },
-    },
-  )
-    .then(response => response.json())
-    .then(data => console.log(data));
+    });
+  const data = await response.json();
+  return console.log(data);
 }
