@@ -27,7 +27,7 @@ export function popularMovies() {
     })
     .then(data => {
       finder.moviesArray = [...finder.moviesArray].concat([...data]);
-      renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 6));
+      renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 12));
       const galleryRefs = document.querySelectorAll('.gallery__list');
       galleryRefs.forEach(el => {
         el.addEventListener('click', () => {
@@ -58,18 +58,18 @@ paginationBack.addEventListener('click', paginationBackHundler);
 paginationForward.addEventListener('click', paginationForwardHundler);
 
 function paginationBackHundler() {
-  if (finder.pageDesktop >= 6) {
-    finder.pageDesktop -= 6;
-    renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 6));
+  if (finder.pageDesktop >= 12) {
+    finder.pageDesktop -= 12;
+    renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 12));
   }
 }
 function paginationForwardHundler() {
-  finder.pageDesktop += 6;
+  finder.pageDesktop += 12;
   if (finder.pageDesktop + 6 < finder.moviesArray.length) {
     finder.page += 1;
     popularMovies();
   }
-  renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 6));
+  renderMoviesList(finder.moviesArray.slice(finder.pageDesktop, finder.pageDesktop + 12));
 }
 
 //document.body.clientWidth

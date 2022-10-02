@@ -1,4 +1,4 @@
 
 export const loader = () => {
-  preloader.classList.toggle("show");
+  loader.classList.toggle("show");
 };

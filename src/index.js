@@ -14,3 +14,5 @@ import './js/request-popular-movies';
 import './js/theme-switch';
 //
 import './js/variables';
+
+console.log(localStorage);
