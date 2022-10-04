@@ -13,7 +13,7 @@ export default class ApiService {
   }
 
   defineUrls(language) {
-    //метод задает массив из 3 url - для разных вариантов запроса - популярное, по слову, по ИД
+    //Array from url - for any type of request - popular, word, id
     this.moviesUrls = [
       `https://api.themoviedb.org/3/trending/movie/day?api_key=${this.key}&language=${language}&page=${this.page}&include_adult=false`,
       `https://api.themoviedb.org/3/search/movie?api_key=${this.key}&language=${language}&query=${this.query}&page=${this.page}&include_adult=false`,
@@ -37,7 +37,7 @@ export default class ApiService {
   }
   async searchGenres() {
     const language = localStorage.getItem('language') || 'en-US';
-    //тут жестко заданный url, т.к. подгрузка жанров осуществляется без запросов пользователя, один раз,в самом начале работы
+    //auto url
     try {
       const response = await fetch(
         `https://api.themoviedb.org/3/genre/movie/list?api_key=${this.key}&language=${language}`);

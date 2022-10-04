@@ -1,11 +1,9 @@
-import { createUserWithEmailAndPassword } from '@firebase/auth';
 import { user } from './auth';
 import { toggleModal } from './open-modal-login';
 import { readFromFBHundler, writeToFBHundler } from './read-write-to-firebase';
 import resetRender from './resetRender';
 
 const { renderLibraryList, clearGalleryContainer } = resetRender;
-
 const myLibraryBtn = document.querySelector('button[data-action="to-library"]');
 const myLibraryWatchedBtn = document.querySelector('button[data-action="open-watched-list"]');
 const myLibraryQueueBtn = document.querySelector('button[data-action="open-queue-list"]');
@@ -23,7 +21,7 @@ function renderOneCollection(collection) {
   }
 }
 
-async function renderAllCollections() {
+ async function renderAllCollections() {
   clearGalleryContainer();
 
   if (user.isLogin) {

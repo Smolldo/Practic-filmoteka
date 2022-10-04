@@ -1,3 +1,4 @@
+
 import { user } from './auth';
 
 export async function readFromFBHundler(nameCollection) {
@@ -5,7 +6,7 @@ export async function readFromFBHundler(nameCollection) {
     `https://practic-bc31f-default-rtdb.firebaseio.com/${user.idLocal}/${nameCollection}.json?auth=${user.id}`);
   const response_1 = await response.json();
   if (response_1 && response_1.error) {
-    console.log('ошибка чтения из FB');
+    console.log('error when read from DB');
   }
   return response_1 ? Object.keys(response_1).map(key => ({
     ...response_1[key],
@@ -29,3 +30,4 @@ export async function writeToFBHundler(nameCollection, object) {
   const data = await response.json();
   return console.log(data);
 }
+

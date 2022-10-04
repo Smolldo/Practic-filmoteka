@@ -25,6 +25,7 @@ export default class MovieModal {
       modal: document.querySelector('[data-movieModal]'),
       watchedBtn: document.querySelector('[data-addToWatched]'),
       queueBtn: document.querySelector('[data-addToQueue]'),
+      deleteBtn: document.querySelector('[data-removeFromList]')
     };
   }
 
@@ -74,6 +75,23 @@ export default class MovieModal {
         }
       });
     });
+
+    this.refs.deleteBtn.addEventListener('click',() =>{
+      if (!user.isLogin) {
+        toggleModal();
+        return;
+      }
+      checkForExistence('queue', this.object).then(response => {
+        if (response === true) {
+          Notify.failure('Will be delete');
+        }
+        if (response === false) {
+          deleteFromFBHundler('queue', this.object);
+          Notify.success('Nothing to delete');
+        }
+      });
+    });
+    
   }
 
   closeModal() {
@@ -86,3 +104,5 @@ async function checkForExistence(nameCollection, obj) {
     return data.some(item => item.imdb_id === obj.imdb_id);
   });
 }
+
+

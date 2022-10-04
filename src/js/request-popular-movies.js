@@ -12,10 +12,8 @@ const finder = new ApiService();
 finder.searchType = 0;
 finder.searchGenres();
 
-/*loader = () => {
-  preloader.classList.toggle('show');
-};
-*/
+
+
 export function popularMovies() {
   clearGalleryContainer();
 
